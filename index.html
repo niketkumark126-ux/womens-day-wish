@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <title>Happy Women's Day Mam</title>
 
 <style>
@@ -9,16 +10,18 @@ body{
 background: linear-gradient(135deg,#ff9a9e,#fad0c4);
 font-family: Arial;
 text-align:center;
-padding:80px;
+overflow:hidden;
 }
 
 .box{
 background:white;
 padding:40px;
-border-radius:15px;
-width:70%;
-margin:auto;
-box-shadow:0 0 20px rgba(0,0,0,0.2);
+border-radius:20px;
+width:60%;
+margin:120px auto;
+box-shadow:0 0 25px rgba(0,0,0,0.2);
+z-index:10;
+position:relative;
 }
 
 h1{
@@ -31,7 +34,27 @@ font-size:20px;
 line-height:1.6;
 }
 
+.butterfly, .leaf{
+position:fixed;
+top:-50px;
+font-size:25px;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+
+0%{
+transform:translateY(-50px);
+}
+
+100%{
+transform:translateY(110vh);
+}
+
+}
+
 </style>
+
 </head>
 
 <body>
@@ -46,8 +69,8 @@ Lekin iske peeche ek chhoti si wajah thi.
 </p>
 
 <p>
-Kal Women's Day tha aur main aapko wish nahi kar paya.
-Isliye maine socha aaj ek chhota sa surprise doon.
+Kal Women's Day tha aur main aapko wish nahi kar paya,
+isliye maine socha aaj ek chhota sa surprise doon.
 </p>
 
 <p>
@@ -57,7 +80,8 @@ Bilkul un titliyon ki tarah aap bhi hamari life mein colours bhar deti ho.
 </p>
 
 <p>
-Agar meri wajah se aapko gussa aaya ho to please mujhe maaf kar dijiyega.
+Agar meri wajah se aapko gussa aaya ho
+to please mujhe maaf kar dijiyega.
 </p>
 
 <h2>❤️ Happy Women's Day Mam ❤️</h2>
@@ -66,12 +90,39 @@ Agar meri wajah se aapko gussa aaya ho to please mujhe maaf kar dijiyega.
 
 </div>
 
-<!-- Background Music -->
-<iframe width="0" height="0"
-src="https://www.youtube.com/embed/BS3ydS47TvY?autoplay=1&loop=1&playlist=BS3ydS47TvY"
-frameborder="0"
-allow="autoplay">
-</iframe>
+<audio autoplay loop>
+<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+for(let i=0;i<25;i++){
+
+let butterfly=document.createElement("div");
+butterfly.className="butterfly";
+butterfly.innerHTML="🦋";
+
+butterfly.style.left=Math.random()*100+"vw";
+butterfly.style.animationDuration=(5+Math.random()*5)+"s";
+
+document.body.appendChild(butterfly);
+
+}
+
+for(let i=0;i<25;i++){
+
+let leaf=document.createElement("div");
+leaf.className="leaf";
+leaf.innerHTML="🍃";
+
+leaf.style.left=Math.random()*100+"vw";
+leaf.style.animationDuration=(6+Math.random()*6)+"s";
+
+document.body.appendChild(leaf);
+
+}
+
+</script>
 
 </body>
 </html>
